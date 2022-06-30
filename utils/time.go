@@ -101,7 +101,7 @@ func EndOfHour(t ...time.Time) time.Time {
 
 // EndOfDay 获取这一天的结束时间
 func EndOfDay(t ...time.Time) time.Time {
-	return StartOfDay(t...).Add(-time.Nanosecond)
+	return StartOfDay(t...).Add(time.Hour*24 - time.Nanosecond)
 }
 
 // EndOfWeek 周结束时间,mondayStart周一是否是开始时间

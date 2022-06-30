@@ -34,3 +34,30 @@ func TestCurrentWeekRange(t *testing.T) {
 	weekStart, weekEnd := CurrentWeekRange(true)
 	t.Log(weekStart, weekEnd)
 }
+
+func TestEndOfDay(t *testing.T) {
+	s := EndOfDay(NowTime())
+	t.Log(s)
+}
+
+func TestEndOfMin(t *testing.T) {
+	endOfMin := EndOfMin(StartOfMin())
+	t.Log(endOfMin)
+
+}
+
+func TestEndOfHour(t *testing.T) {
+	endOfHour := EndOfHour()
+	t.Log(endOfHour)
+}
+
+func TestEndOfMonth(t *testing.T) {
+	endOfMonth := EndOfMonth()
+	t.Log(endOfMonth)
+
+}
+
+func TestEndOfYear(t *testing.T) {
+	year := EndOfYear()
+	t.Log(year)
+}
