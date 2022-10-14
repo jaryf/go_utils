@@ -1,4 +1,4 @@
-package utils
+package grand
 
 import (
 	"testing"
@@ -9,9 +9,21 @@ func TestIntn(t *testing.T) {
 	t.Log(s)
 }
 
+func BenchmarkIntn(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		Intn(500)
+	}
+}
+
 func TestRandBytes(t *testing.T) {
 	b := RandBytes(10)
 	t.Log(b)
+}
+
+func BenchmarkRandBytes(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		RandBytes(10)
+	}
 }
 
 func TestRandRangeIntN(t *testing.T) {
@@ -27,6 +39,12 @@ func TestS(t *testing.T) {
 func TestRandStr(t *testing.T) {
 	randStr := RandStr("01234你耗阿萨德绿卡结束勒肯定就看", 5)
 	t.Log(randStr)
+}
+
+func BenchmarkRandStr(b *testing.B) {
+	for i := 0; i < b.N; i++ {
+		RandStr("01234你耗阿萨德绿卡结束勒肯定就看", 5)
+	}
 }
 
 func TestRandDigits(t *testing.T) {

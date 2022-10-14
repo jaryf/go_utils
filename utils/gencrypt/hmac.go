@@ -1,4 +1,4 @@
-package utils
+package gencrypt
 
 import (
 	"crypto/hmac"

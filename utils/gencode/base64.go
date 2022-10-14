@@ -1,4 +1,4 @@
-package utils
+package gencode
 
 import (
 	"encoding/base64"
